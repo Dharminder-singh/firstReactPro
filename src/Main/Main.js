@@ -1,26 +1,26 @@
-import './MainStyle.css'
+import './MainStyle.css';
+import { useState } from 'react';
+
 const Main = () =>{
+    const [count , setcount] = useState(0)
+    const [x , y] = useState('Dharminder');
     const namechnage = () =>{
-        const name = ["Dhamrinder", "Singh" ]
+        const name = ["Dharminder", "Singh" ]
         const int = Math.floor(Math.random() * 2);
-    
-        return name[int];
+        y(name[int])
+        return name[int]
+        
       }
-      const clickButton = () =>{
-        console.log("you click")
-      }
-      const clickButton2 = (name) =>{
-        console.log(`${name} hello`)
-      }
-      const clickButton3 = (e) =>{
-        console.log(e.target.innerHTML)
+      
+      const clickButton4 = () =>{
+       setcount(count + 1);
       }
       return (
         <main className='main'>
-            <p>Hello {namechnage()}!</p>
-            <button className='btn' onClick={clickButton}>click it</button>
-            <button className='btn' onClick={()=>{clickButton2('dharminder')}}>click it</button>
-            <button className='btn' onClick={(e)=>{clickButton3(e)}}>click it</button>
+            <h2>Hello {x}!</h2>
+            <button className='btn' onClick={namechnage}>chnage the name</button>
+            <p>{count}</p>
+            <button className='btn' onClick={clickButton4}>click it</button>
         </main>
     )
 }

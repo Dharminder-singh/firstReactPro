@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header/header';
 import Main from './Main/Main';
 import Footer from './footer/Footer'
+import ListItems from './ListItems/ListItems';
 import './custom.css';
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      <ListItems />
       <Footer />
     </div>
   );

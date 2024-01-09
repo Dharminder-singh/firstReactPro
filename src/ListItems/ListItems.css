@@ -1,0 +1,37 @@
+.sectiom01{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectiom01 ul.list-items{
+    list-style: none;
+    width: 100%;
+    padding: 20px;
+}
+.sectiom01 ul.list-items li.item{
+    padding: 20px;
+    background-color: gray;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+}
+.sectiom01 ul.list-items li.item input[type="checkbox"]{
+    width: 40px;
+    height: 40px;
+}
+.sectiom01 ul.list-items li.item label{
+    font-size: 25px ;
+    color: aliceblue;
+}
+.sectiom01 ul.list-items li.item .delBtn{
+    font-size: 15px ;
+    color: aliceblue;
+    background-color: red;
+    padding: 7px 10px;
+    border:1px solid black;
+    text-transform: uppercase;
+}

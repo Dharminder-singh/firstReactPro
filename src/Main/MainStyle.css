@@ -1,6 +1,6 @@
 .main{
     background: #61dafb;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,5 +12,11 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    margin: 15px;
+    margin: 5px;
+}
+main h2{
+    font-size: 35px;
+}
+main P{
+     font-size: 35px;
 }
