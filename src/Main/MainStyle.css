@@ -1,7 +1,16 @@
-main{
+.main{
     background: #61dafb;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.main .btn{
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
 }
