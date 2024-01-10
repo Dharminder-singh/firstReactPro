@@ -1,5 +1,5 @@
 import './footerStyle.css';
-const Footer = () =>{
+const Footer = ({lenght}) =>{
     const today = new Date();
     return(
         <footer>

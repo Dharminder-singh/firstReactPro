@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 const Main = () =>{
     const [count , setcount] = useState(0)
-    const [x , y] = useState('Dharminder');
+    const [x , y] = useState('Developer');
     const namechnage = () =>{
-        const name = ["Dharminder", "Singh" ]
+        const name = ["Developer", "Coder" ]
         const int = Math.floor(Math.random() * 2);
         y(name[int])
         return name[int]
