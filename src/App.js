@@ -2,52 +2,65 @@ import './App.css';
 import Header from './Header/header';
 import Main from './Main/Main';
 import Footer from './footer/Footer'
-import ListItems from './ListItems/ListItems';
+import MainApp from './ListApp/MainApp';
 import './custom.css';
 import { useState } from 'react';
+import AddItems from './AddItems/AddItems'
 
 function App() {
   
-  const [items , setitems] = useState([
-    {
-        id : 1,
-        checked : false,
-        item : "item 1"
-    },
-    {
-        id : 2,
-        checked : false,
-        item : "item 2"
-    },
-    {
-        id : 3,
-        checked : false,
-        item : "item 3"
-    }
-]);
+  
+
+  const [items , setitems] = useState(JSON.parse(localStorage.getItem('mylist')));
+
+const [newItem , setNewItems] = useState('')
+
+  const saveAndsetItmes = (myItemList) =>{
+    setitems(myItemList);
+    localStorage.setItem('mylist' , JSON.stringify(myItemList));
+  }
+
+  const additem = (item) =>{
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
+
+    const myNewItem = {id , checked : false , item} ;
+    const listitems = [...items, myNewItem]
+    saveAndsetItmes(listitems);
+  }
 
 const itemChange = (id)=>{
 const listitems = items.map((item) => item.id === id ? {...item, checked: !item.checked}: item );
-setitems(listitems);
-localStorage.setItem('mylist' , JSON.stringify(listitems));
+saveAndsetItmes(listitems);
 }
 const itemDelete = (id)=>{
 const listitems = items.filter((item) => item.id !== id)
-setitems(listitems)
-localStorage.setItem('mylist' , JSON.stringify(listitems));
+saveAndsetItmes(listitems);
+}
+
+const itemNewAdd = (e)=> {
+  e.preventDefault();
+  if (!newItem) return;
+  additem(newItem);
+  setNewItems('')
+ 
 }
 
   return (
     <div className="App">
       <Header 
-      title="My List"
+        title="My List"
       />
       <Main />
-      <ListItems 
-      items = {items}
-      itemChange = {itemChange}
-      itemDelete = {itemDelete}
-      lenght = {items.length}
+      <MainApp 
+        items = {items}
+        itemChange = {itemChange}
+        itemDelete = {itemDelete}
+        lenght = {items.length}
+      />
+      <AddItems 
+        newItem = {newItem}
+        setNewItems = {setNewItems}
+        itemNewAdd = {itemNewAdd}
       />
       <Footer 
         

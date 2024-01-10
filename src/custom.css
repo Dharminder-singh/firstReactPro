@@ -1,6 +1,12 @@
 .App{
-    height: 100vh;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: center;
+    width: 100%; 
+    max-width: 1400px;
+    border: 1px solid mediumblue;
+    margin: auto;
+}
+.hide{
+    display: none;
 }

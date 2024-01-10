@@ -1,33 +1,47 @@
 .sectiom01{
-    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    flex-grow: 1;
+    width: 100%;
 }
 .sectiom01 ul.list-items{
     list-style: none;
     width: 100%;
     padding: 5px;
 }
+.sectiom01 ul li::before {
+    content: "\200B";
+  }
 .sectiom01 ul.list-items li.item{
     padding: 20px;
     background-color: gray;
     width: 100%;
     margin: 10px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     text-transform: capitalize;
 }
+.sectiom01 ul.list-items li.item:first-child {
+    margin: 0;
+  }
 .sectiom01 ul.list-items li.item input[type="checkbox"]{
-    width: 40px;
-    height: 40px;
+    text-align: center;
+    width: 2.5rem;
+    width: 48px;
+    min-width: 48px;
+    height: 2.5rem;
+    height: 48px;
+    min-height: 48px;
+    cursor: pointer;
+    margin-right: 0.5rem;
 }
 .sectiom01 ul.list-items li.item label{
     font-size: 25px ;
-    color: aliceblue;
+    flex-grow: 1;
 }
 .sectiom01 ul.list-items li.item .delBtn{
     font-size: 15px ;

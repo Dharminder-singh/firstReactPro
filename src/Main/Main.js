@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 const Main = () =>{
     const [count , setcount] = useState(0)
-    const [x , y] = useState('Developer');
+    const [name , setname] = useState('Developer');
     const namechnage = () =>{
         const name = ["Developer", "Coder" ]
         const int = Math.floor(Math.random() * 2);
-        y(name[int])
+        setname(name[int])
         return name[int]
         
       }
@@ -17,7 +17,7 @@ const Main = () =>{
       }
       return (
         <main className='main'>
-            <h2>Hello {x}!</h2>
+            <h2>Hello {name}!</h2>
             <button className='btn' onClick={namechnage}>chnage the name</button>
             <p>{count}</p>
             <button className='btn' onClick={clickButton4}>click it</button>
