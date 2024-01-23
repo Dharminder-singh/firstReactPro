@@ -1,12 +1,16 @@
 # Getting Started with clone the repo
 
-go the root directory, and install the dependancy 
+go to the root directory, and install the dependencies 
 
 ### `npm install` 
 
+Run the local server using command 
+
+###`npm json-server -p 3500 -w data/db.json`
+
 ### Available Scripts
 
-In the project directory, you can run:
+Now In the project directory, you can run:
 
 ### `npm start`
 
